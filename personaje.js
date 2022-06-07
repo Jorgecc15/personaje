@@ -9,7 +9,7 @@ class Personaje{
     }
     dibujarse(){
 ctx.translate(this.x,this.y);
-ctx.rotate(this.angle*Math.PI)
+ctx.rotate((this.angle*Math.PI)/180)
 ctx.beginPath();
 ctx.arc(0,0,this.r,0,2*Math.PI);
 ctx.stroke();
@@ -31,19 +31,17 @@ ctx.arc(15,-11,this.r/15,0.25*Math.PI,2.25*Math.PI);
 ctx.stroke();
 ctx.fill();
 ctx.strokeStyle="black"
-ctx.beginPath()
+ctx.rotate(-(this.angle*Math.PI)/180)
+ctx.translate(-this.x,-this.y);
+
 
     }
 }
 let Jorge = new Personaje(200,100,0,50)
 Jorge.dibujarse();
-
-let contenedor =  document.querySelector("#contenedor")
-contenedor.innerHTML = "Jorge";
-
-let Nicolas = new Personaje (300,200,45,20)
+let Nicolas = new Personaje (300,200,45,50)
 Nicolas.dibujarse();
-
-
-let contenedor =  document.querySelector("#contenedor")
-contenedor.innerHTML = "Nicolas";
+let Pablo = new Personaje (500,100,105,50)
+Pablo.dibujarse();
+let Pepito = new Personaje (700,50,220,50)
+Pepito.dibujarse();

@@ -40,3 +40,10 @@ Jorge.dibujarse();
 
 let contenedor =  document.querySelector("#contenedor")
 contenedor.innerHTML = "Jorge";
+
+let Nicolas = new Personaje (300,200,45,20)
+Nicolas.dibujarse();
+
+
+let contenedor =  document.querySelector("#contenedor")
+contenedor.innerHTML = "Nicolas";
